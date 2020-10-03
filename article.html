@@ -49,8 +49,8 @@
      <div class="container">
         <h2 class="title article-detail__title title--text-align-left">Как себя мотивировать</h2>
         <div class="article-detail__tags">
-            <p>Теги: путешествия</p>
-            <time>29.09.2020</time>
+            <p>Теги: <span>путешествия</span></p>
+            <time datetime="29.09.2020">29.09.2020</time>
         </div>
         <div class="article-detail__text">
             <p>Расскажу о биопсихологической теории личности Джеффри Грея, которая помогла мне разобраться в работе мотивационных стимулов. Узнала я о ней из книги «Воля и самоконтроль. Как гены и мозг мешают нам бороться
@@ -163,8 +163,8 @@
         <h3 class="comments-form-title">Оставить комментарий</h3>
         <form action="">
             <div class="comments-form__left-part">
-                <input class="comments-form__input" type="text" name="" id="" placeholder="Имя">
-                <input class="comments-form__input" type="email" name="" id="" placeholder="Почта">
+                <input class="comments-form__input" type="text" name="" id="" placeholder="Имя" minlength="10" maxlength="200" required>
+                <input class="comments-form__input" type="email" name="" id="" placeholder="Почта" minlength="10" maxlength="200" required>
                 <button class="btn comments-form__btn btn--submit" type="submit"><span>Отправить</span></button>
             </div>
             <div class="comments-form__right-part">

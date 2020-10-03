@@ -22,10 +22,10 @@
       </picture>
 <nav class="header-nav">
     <ul>
-        <li><a href="#">Статьи</a></li>
-        <li><a href="#">Обо мне</a></li>
-        <li><a href="#">Портфолио</a></li>
-        <li><a href="#">Написать мне</a></li>
+        <li><a href="#all-articles">Статьи</a></li>
+        <li><a href="#about-me">Обо мне</a></li>
+        <li><a href="#portfolio">Портфолио</a></li>
+        <li><a href="#write-me">Написать мне</a></li>
     </ul>
 </nav>
 
@@ -35,17 +35,17 @@
     <button type="button" class="close-btn"><span></span></button>
     </div>
     <ul>
-        <li><a href="#">Статьи</a></li>
-        <li><a href="#">Обо мне</a></li>
-        <li><a href="#">Портфолио</a></li>
-        <li><a href="#">Написать мне</a></li>
+        <li><a href="#all-articles">Статьи</a></li>
+        <li><a href="#about-me">Обо мне</a></li>
+        <li><a href="#portfolio">Портфолио</a></li>
+        <li><a href="#write-me">Написать мне</a></li>
     </ul>
 </nav>
 </div>
         </div>
     </header>
 <main>
-<article class="all-articles">
+<article class="all-articles" id="all-articles">
     <div class="container">
         <div class="all-articles-row">
             <h2 class="title">Все статьи</h2>
@@ -57,9 +57,12 @@
                   </svg>  
                   <nav class="dropdown-menu dropdown-menu--choose-theme">
                     <ul>
-                        <li><a href="#">Путешествия</a></li>
-                        <li><a href="#">Город</a></li>
-                        <li><a href="#">Книги</a></li>
+                        <li><a href="#">путешествия</a></li>
+                        <li><a href="#">город</a></li>
+                        <li><a href="#">книги</a></li>
+                        <li><a href="#">фотографии</a></li>
+                        <li><a href="#">рецепты</a></li>
+                        <li><a href="#">все статьи</a></li>
                     </ul>
                 </nav>                
             </button>
@@ -84,8 +87,8 @@
                     <p>Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!</p>
                 </div>
                 <footer class="article-card__footer">
-                    <p>Теги: путешествия</p>
-                    <time>29.09.2020</time>
+                    <p>Теги: <span>путешествия</span></p>
+                    <time datetime="29.09.2020">29.09.2020</time>
                 </footer>
             </div>
             </a>
@@ -110,8 +113,8 @@
                         где подают лучший летний напиток.</p>
                 </div>
                 <footer class="article-card__footer">
-                    <p>Теги: город</p>
-                    <time>24.07.2020</time>
+                    <p>Теги: <span>город</span></p>
+                    <time datetime="24.07.2020">24.07.2020</time>
                 </footer>
             </div>
             </a>
@@ -135,8 +138,8 @@
                     <p>Рассказываю о прочитанных за последнее время книгах: фавориты и провалы.</p>
                 </div>
                 <footer class="article-card__footer">
-                    <p>Теги: книги</p>
-                    <time>15.07.2020</time>
+                    <p>Теги: <span>книги</span></p>
+                    <time datetime="15.07.2020">15.07.2020</time>
                 </footer>
             </div>
             </a>
@@ -163,8 +166,8 @@
                             и секретами удачных снимков.</p>
                     </div>
                     <footer class="article-card__footer">
-                        <p>Теги: фотографии</p>
-                        <time>29.06.2020</time>
+                        <p>Теги: <span>фотографии</span></p>
+                        <time datetime="29.06.2020">29.06.2020</time>
                     </footer>
                 </div>
             </a>
@@ -189,8 +192,8 @@
                             ягодами? Только домашний чизкейк!</p>
                     </div>
                     <footer class="article-card__footer">
-                        <p>Теги: рецепты</p>
-                        <time>24.06.2020</time>
+                        <p>Теги: <span>рецепты</span></p>
+                        <time datetime="24.06.2020">24.06.2020</time>
                     </footer>
                 </div>
             </a>
@@ -199,7 +202,7 @@
         <button class="btn btn--show-more" type="button"><span>Показать ещё</span></button>
     </div>
 </article>
-<section class="about-me">
+<section class="about-me" id="about-me">
     <div class="container">
         <h2 class="title title--about-me title--text-center">Обо мне</h2>
     <div class="row row--about-me">
@@ -232,7 +235,7 @@
     </div>
     </div>
 </section>
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
     <div class="container">
         <h2 class="title title--portfolio title--text-center">Портфолио</h2>
     <div class="row row--portfolio-cards">
@@ -275,16 +278,16 @@
     <button class="btn btn--uppercase-txt btn--show-more" type="button">Показать ещё</button>
     </div>
 </section>
-<section class="write-me">
+<section class="write-me" id="write-me">
     <h2 class="title title--text-center">Написать мне</h2>
     <div class="container">
 <div class="write-me-form" id="write-me-form">
     <form action="">
     <div class="form-row">
-        <label class="form-label" for="name">Ваше имя</label><input class="form-input" type="text" id="name" placeholder="Иван Иванов">
+        <label class="form-label" for="name">Ваше имя</label><input class="form-input" minlength="10" maxlength="200" type="text" id="name" placeholder="Иван Иванов" required>
     </div>
     <div class="form-row">
-        <label class="form-label" for="mail">Email</label><input class="form-input" type="mail" id="mail" placeholder="google@gmail.com">
+        <label class="form-label" for="mail">Email</label><input class="form-input" minlength="10" maxlength="200" type="mail" id="mail" placeholder="google@gmail.com" required>
     </div>
     <textarea class="form-textarea" name="" id="" cols="30" rows="10" placeholder="Напишите здесь ваше сообщение."></textarea>
     <button class="btn btn--submit" type="submit"><span>Отправить</span></button>

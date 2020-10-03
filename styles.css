@@ -584,6 +584,7 @@ font-size: clamp(0.9rem,4vw,2rem);
     border: 1px solid #202117;
     padding: 12px 57px;
     margin-top: 1rem;
+    background-color: transparent;
 }
 @media (min-width: 768px) {
     .btn--show-more {
@@ -956,6 +957,12 @@ font-size: clamp(0.9rem,4vw,2rem);
     text-decoration: none;
     color: inherit;
     display: inline-flex;
+    transition: var(--text-color-animation);
+}
+.to-all-articles-link:hover,
+.to-all-articles-link:active,
+.to-all-articles-link:focus {
+    color: var(--hover-text-color);
 }
 .to-all-articles-link span {
     padding-right: 26px;
@@ -989,6 +996,9 @@ font-size: clamp(0.9rem,4vw,2rem);
 }
 .people-comments__avatar {
     margin-right: 13px;
+}
+.people-comments__avatar img {
+    border-radius: 10px;
 }
 .people-comments__name {
     font-weight: bold;
