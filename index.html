@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Description of the page less than 150 characters">
+    <meta name="keywords" content="Статьи, Обо мне, Портфолио">
     <title>Blog Zaverstai</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="styles.css">
+    <!-- for development -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- for production -->
+    <link rel="stylesheet" href="styles.min.css">
 </head>
 <body>
     <header class="header">
@@ -48,7 +53,7 @@
 <article class="all-articles" id="all-articles">
     <div class="container">
         <div class="all-articles-row">
-            <h2 class="title">Все статьи</h2>
+            <h1 class="title">Все статьи</h1>
             <button type="button" class="btn btn--choose-theme">
                 <span>Выбрать тему</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 14">
@@ -204,7 +209,7 @@
 </article>
 <section class="about-me" id="about-me">
     <div class="container">
-        <h2 class="title title--about-me title--text-center">Обо мне</h2>
+        <h1 class="title title--about-me title--text-center">Обо мне</h1>
     <div class="row row--about-me">
         <picture>
             <img src="img/about-me-img.webp" alt="image about me" 
@@ -237,7 +242,7 @@
 </section>
 <section class="portfolio" id="portfolio">
     <div class="container">
-        <h2 class="title title--portfolio title--text-center">Портфолио</h2>
+        <h1 class="title title--portfolio title--text-center">Портфолио</h1>
     <div class="row row--portfolio-cards">
         <div class="portfolio-card portfolio-card-1">
             <header>
@@ -279,7 +284,7 @@
     </div>
 </section>
 <section class="write-me" id="write-me">
-    <h2 class="title title--text-center">Написать мне</h2>
+    <h1 class="title title--text-center">Написать мне</h1>
     <div class="container">
 <div class="write-me-form" id="write-me-form">
     <form action="">
@@ -308,6 +313,9 @@
         </nav>
     </div>
 </footer>
-    <script src="scripts.js"></script>
+<!-- for development -->
+    <!-- <script src="scripts.js"></script> -->
+<!-- for production -->
+<script src="scripts.min.js"></script>
 </body>
 </html>

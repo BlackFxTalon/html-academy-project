@@ -1,3 +1,4 @@
+// site scripts
 const hambBtn = document.querySelector('.hamb-btn');
 const closeBtn = document.querySelector('.close-btn');
 

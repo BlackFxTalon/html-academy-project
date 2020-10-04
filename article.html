@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Description of the page less than 150 characters">
+    <meta name="keywords" content="Статьи, Обо мне, Портфолио">
     <title>Blog Zaverstai</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="styles.css">
+    <!-- for development -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- for production -->
+    <link rel="stylesheet" href="styles.min.css">
 </head>
 <body>
     <header class="header header--article-page">
@@ -47,7 +52,7 @@
 <main>
  <section class="article-detail">
      <div class="container">
-        <h2 class="title article-detail__title title--text-align-left">Как себя мотивировать</h2>
+        <h1 class="title article-detail__title title--text-align-left">Как себя мотивировать</h1>
         <div class="article-detail__tags">
             <p>Теги: <span>путешествия</span></p>
             <time datetime="29.09.2020">29.09.2020</time>
@@ -187,6 +192,9 @@
         </nav>
     </div>
 </footer>
-    <script src="scripts.js"></script>
+    <!-- for development -->
+    <!-- <script src="scripts.js"></script> -->
+<!-- for production -->
+<script src="scripts.min.js"></script>
 </body>
 </html>
