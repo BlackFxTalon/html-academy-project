@@ -1,0 +1,29 @@
+.header-top
+      picture.header-logo
+        img(src="img/header-logo.webp" alt="header logo" srcset="img/header-logo-0,5x.webp 0.5x, img/header-logo-2x.webp 2x" width="130" height="83" loading="lazy")
+        source(type="image/png" srcset="img/header-logo.png, img/header-logo-0,5x.png 0.5x, img/header-logo-2x.png 2x" alt="header logo" width="130" height="83")
+      nav.header-nav
+        ul
+          li
+            a(href="#all-articles") Статьи
+          li
+            a(href="#about-me") Обо мне
+          li
+            a(href="#portfolio") Портфолио
+          li
+            a(href="#write-me") Написать мне
+      button.hamb-btn(type="button" aria-label="hamburger menu button")
+        span
+      nav.header-mobile-menu
+        .header-mobile-menu__top
+          button.close-btn(type="button" aria-label="close menu button")
+            span
+        ul
+          li
+            a(href="#all-articles") Статьи
+          li
+            a(href="#about-me") Обо мне
+          li
+            a(href="#portfolio") Портфолио
+          li
+            a(href="#write-me") Написать мне

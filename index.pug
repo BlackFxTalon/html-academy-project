@@ -1,0 +1,197 @@
+extends pug/base
+
+prepend vars
+    - title = 'Blog Zaverstai'
+    - description = 'Description of the page less than 150 characters'
+
+append vars
+	
+
+append meta
+    meta(name="keywords", content="Статьи, Обо мне, Портфолио")
+
+append links
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous")
+
+append styles
+    link(rel="stylesheet" href="/css/styles.min.css")
+
+block content
+    header.header
+      .container
+        include pug/header-top
+    main
+      article#all-articles.all-articles
+        .container
+          .all-articles-row
+            h1.title Все статьи
+            button.btn.btn--choose-theme(type="button" aria-label="choose theme button")
+              span
+                | Выбрать тему
+              svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 16 14")
+                defs
+                path(fill="#fff" d="M9.688 12.342a2 2 0 01-3.376 0L.425 3.072C-.421 1.741.535 0 2.113 0h11.774c1.577 0 2.534 1.74 1.688 3.072l-5.887 9.27z")
+              nav.dropdown-menu.dropdown-menu--choose-theme
+                ul
+                  li
+                    a(href="#") путешествия
+                  li
+                    a(href="#") город
+                  li
+                    a(href="#") книги
+                  li
+                    a(href="#") фотографии
+                  li
+                    a(href="#") рецепты
+                  li
+                    a(href="#") все статьи
+          .row.row--article
+		    +article-card--small({
+				img: 'img/article-img-1.webp',
+				alt: 'article image one',
+				srcsetImg: 'img/article-img-1-0,5x.webp 0.5x, img/article-img-1-2x.webp 2x',
+				articleCardTitle: 'Путешествие в Берлин в августе',
+				articleBodyContent: 'Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!',
+				dateTime: '29.09.2020'
+			})
+
+			+article-card--small({
+				img: 'img/article-img-1.webp',
+				alt: 'article image one',
+				srcsetImg: 'img/article-img-1-0,5x.webp 0.5x, img/article-img-1-2x.webp 2x',
+				articleCardTitle: 'Путешествие в Берлин в августе',
+				articleBodyContent: 'Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!',
+				dateTime: '29.09.2020'
+			})
+
+			+article-card--small({
+				img: 'img/article-img-1.webp',
+				alt: 'article image one',
+				srcsetImg: 'img/article-img-1-0,5x.webp 0.5x, img/article-img-1-2x.webp 2x',
+				articleCardTitle: 'Путешествие в Берлин в августе',
+				articleBodyContent: 'Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!',
+				dateTime: '29.09.2020'
+			})
+
+			+article-card--small({
+				img: 'img/article-img-1.webp',
+				alt: 'article image one',
+				srcsetImg: 'img/article-img-1-0,5x.webp 0.5x, img/article-img-1-2x.webp 2x',
+				articleCardTitle: 'Путешествие в Берлин в августе',
+				articleBodyContent: 'Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!',
+				dateTime: '29.09.2020'
+			})
+           
+          .row.row--big-article-cards-row
+            article.article-card.article-card--big
+              a(href="#")
+                picture
+                  img(src="img/article-img-4.webp" alt="article image four" srcset="img/article-img-4-0,5x.webp 0.5x, img/article-img-4-2x.webp 2x" width="387" height="268" loading="lazy")
+                  source(type="image/jpg" srcset="img/article-img-4.jpg, img/article-img-4-0,5x.jpg 0.5x, img/article-img-4-2x.jpg 2x" alt="article image three" width="387" height="268")
+                .article-card__content.article-card__content--big-article-card
+                  header
+                    h3.article-title.article-title--big-text Снимки на плёнку
+                  .article-card__body
+                    p Поделилась с вами весенними фотографиями, и секретами удачных снимков.
+                  footer.article-card__footer
+                    p
+                      | Теги: 
+                      span
+                        | фотографии
+                    time(datetime="29.06.2020") 29.06.2020
+            article.article-card.article-card--big
+              picture
+                a(href="#")
+                  img(src="img/article-img-5.webp" alt="article image five" srcset="img/article-img-5-0,5x.webp 0.5x, img/article-img-5-2x.webp 2x" width="387" height="268" loading="lazy")
+                  source(type="image/jpg" srcset="img/article-img-5.jpg, img/article-img-5-0,5x.jpg 0.5x, img/article-img-5-2x.jpg 2x" alt="article image three" width="387" height="268")
+              .article-card__content.article-card__content--big-article-card
+                header
+                  h3.article-title.article-title--big-text Домашний чизкейк
+                .article-card__body
+                  p Что может быть лучше чизкейка с сезонными ягодами? Только домашний чизкейк!
+                footer.article-card__footer
+                  p
+                    | Теги: 
+                    span
+                      | рецепты
+                  time(datetime="24.06.2020") 24.06.2020
+          button.btn.btn--show-more(type="button" aria-label="show more button")
+            span
+              | Показать ещё
+      section#about-me.about-me
+        .container
+          h1.title.title--about-me.title--text-center Обо мне
+          .row.row--about-me
+            picture
+              img(src="img/about-me-img.webp" alt="image about me" srcset="img/about-me-img-0,5x.webp 320w, img/about-me-img-2x.webp 2x" width="590" height="693" loading="lazy")
+              source(type="image/jpg" srcset="img/about-me-img.jpg, img/about-me-img-0,5x.jpg 320w, img/about-me-img-2x.jpg 2x" alt="article image three" width="590" height="693")
+            .right-part
+              p
+                | Всем привет! Меня зовут Аня, и это мой личный блог. Здесь ты найдёшь рассказы о моих путешествиях, снимки на плёнку, рецепты, обзоры на книги. В общем, тексты о том, что мне интересно.
+              p
+                | Я работаю копирайтером, поэтому мой блоге — это ещё и моё портфолио. Ниже размещены несколько моих лучших рабочих текстов. Буду рада новым сотрудничествам!
+              p
+                | Если вы хотите написать мне — это можно сделать в соцсетях или через 
+                a(href="#write-me-form") форму
+                | . Всегда приятно услышать обратную связь от читателей и познакомиться поближе.
+              p Приятного чтения!
+              blockquote
+                | Я верю, что каждый раз пробуя новое, выходящее за зону моего комфорта, я действительно узнаю настоящую себя.
+      section#portfolio.portfolio
+        .container
+          h1.title.title--portfolio.title--text-center Портфолио
+          .row.row--portfolio-cards
+            .portfolio-card.portfolio-card-1
+              header
+                h3 Блог HTML Academy
+                h4 «Как учиться продуктивно»
+              div
+                p
+                  | Про основные методы обучения, которые помогут быстро и надолго запомнить информацию.
+            .portfolio-card.portfolio-card-2
+              header
+                h3 Журнал «LNK»
+                h4 «Зачем поцели нужны человеку? И какие они бывают»
+              div
+                p
+                  | Поцелуи — повсеместная ежедневная практика. Но зачем люди целуются? Какие смысли вкладывают в этот ритуал? И где корни этой практики?
+            .portfolio-card.portfolio-card-3
+              header
+                h3 Журнал «Т — Л»
+                h4 «Советы по эффективной удалённой работе»
+              div
+                p Поделилась лайфхаками, которые помогают мне работать продуктивно из дома.
+          button.btn.btn--uppercase-txt.btn--show-more(type="button" aria-label="show more button") Показать ещё
+      section#write-me.write-me
+        h1.title.title--text-center Написать мне
+        .container
+          #write-me-form.write-me-form
+            form(action="")
+              .form-row
+                label.form-label(for="name")
+                  | Ваше имя
+                input#name.form-input(minlength="10" maxlength="200" type="text" placeholder="Иван Иванов" required="")
+              .form-row
+                label.form-label(for="mail")
+                  | Email
+                input#mail.form-input(minlength="10" maxlength="200" type="mail" placeholder="google@gmail.com" required="")
+              textarea.form-textarea(name="" id="" cols="30" rows="10" placeholder="Напишите здесь ваше сообщение.")
+              button.btn.btn--submit(type="submit" aria-label="submit form button")
+                span
+                  | Отправить
+    footer.footer
+      .container
+        nav.footer-nav
+          ul
+            li
+              a(href="#") ВК
+            li
+              a(href="#") Телеграм
+            li
+              a(href="#") Инстаграм
+            li
+              a(href="#") Твиттер
+
+
+append scripts
+   script(src="/js/scripts.min.js")

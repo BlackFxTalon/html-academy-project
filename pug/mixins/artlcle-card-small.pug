@@ -1,0 +1,16 @@
+mixin article-card--small(options)
+    .article-card.article-card--small&attributes(attributes)
+        a(href="#")
+                picture
+                  img(src=options.img alt=options.alt srcset=options.srcsetImg width="387" height="268" loading="lazy")
+                  source(type="image/jpg" srcset=options.srcsetSourceImg alt=options.alt width="387" height="268")
+                .article-card-content
+                  header
+                    h3.article-title= options.articleCardTitle
+                  .article-card__body
+                    p = options.articleBodyContent
+                  footer.article-card__footer
+                    p
+                      | Теги: 
+                      span = options.tags-name
+                    time(datetime=options.dateTime)= options.dateTime
