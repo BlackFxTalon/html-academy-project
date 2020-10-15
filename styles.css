@@ -1101,6 +1101,12 @@ font-size: clamp(0.9rem,4vw,2rem);
     max-height: clamp(20px,4vw,50px);
     margin-right: 14px;
 }
+.social-media__like-btn svg path {
+    transition: fill .3s;
+}
+.social-media__like-btn--liked > svg path {
+    fill: #d7d1c9;
+}
 .like-count {
     -ms-flex-item-align: end;
         align-self: flex-end;
