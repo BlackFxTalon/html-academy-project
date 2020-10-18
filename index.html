@@ -11,7 +11,10 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
 
-<link rel="stylesheet" href="styles.css">
+<!-- for development -->
+<!-- <link rel="stylesheet" href="styles.css"> -->
+<!-- for production -->
+<link rel="stylesheet" href="styles.min.css">
 </head>
 
 <body> 
@@ -49,10 +52,20 @@
 
 <div class="container">
 
-<div class="all-articles-row"><h1 class="title">Все статьи</h1> <button type="button" class="btn btn--choose-theme" aria-label="choose theme button"> 
+<div class="all-articles-row"><h1 class="title">Все статьи</h1> 
 
-<span>Выбрать тему
-</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 14"> <defs/> 
+<!-- <select class="btn btn__filter-btn" name="theme-filter" id="">
+    <option value="">Выбрать тему</option>
+    <option value="путешествия">путешествия</option>
+    <option value="город">город</option>
+    <option value="книги">книги</option>
+    <option value="фотографии">фотографии</option>
+    <option value="рецепты">рецепты</option>
+    <option value="все статьи">все статьи</option>
+</select> -->
+<button type="button" class="btn btn__filter-btn" aria-label="choose theme button"> 
+
+<span>Выбрать тему</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 14"> <defs/> 
 
 <path fill="#fff" d="M9.688 12.342a2 2 0 01-3.376 0L.425 3.072C-.421 1.741.535 0 2.113 0h11.774c1.577 0 2.534 1.74 1.688 3.072l-5.887 9.27z"/> </svg> <nav class="dropdown-menu dropdown-menu--choose-theme">
 <ul>
@@ -62,7 +75,8 @@
 <li><a href="#">фотографии</a></li>
 <li><a href="#">рецепты</a></li>
 <li><a href="#">все статьи</a></li>
-</ul> </nav> </button>
+</ul> </nav> 
+</button>
 </div>
 
 <div class="row row--article"> <article class="article-card article-card--small"> <a href="#"> 
@@ -221,20 +235,20 @@
 
 <div class="write-me-form" id="write-me-form">
 
-<form action="">
+<form class="form" action="" method="POST">
 
 <div class="form-row"> 
 <label class="form-label" for="name">Ваше имя
 </label>
-<input class="form-input" minlength="10" maxlength="200" type="text" id="name" placeholder="Иван Иванов" required>
+<input class="form-input form-input__text" minlength="10" maxlength="200" type="text" id="name" placeholder="Иван Иванов" required>
 </div>
 
 <div class="form-row"> 
 <label class="form-label" for="mail">Email
 </label>
-<input class="form-input" minlength="10" maxlength="200" type="mail" id="mail" placeholder="google@gmail.com" required>
+<input class="form-input form-input__mail" minlength="10" maxlength="200" type="mail" id="mail" placeholder="google@gmail.com" required>
 </div>
-<textarea class="form-textarea" name="" id="" cols="30" rows="10" placeholder="Напишите здесь ваше сообщение.">
+<textarea class="form-textarea" name="" id="" cols="30" rows="10" minlength="10" maxlength="200" placeholder="Напишите здесь ваше сообщение.">
 </textarea><button class="btn btn--submit" type="submit" aria-label="submit form button">
 
 <span>Отправить
@@ -251,7 +265,11 @@
 <li><a href="#">Твиттер</a></li>
 </ul> </nav>
 </div> </footer> 
-<script src="scripts.js">
-</script> 
+<!-- for development -->
+<!-- <script src="main.js" type="module">
+</script>  -->
+<!-- for production -->
+<script src="main.min.js" type="module">
+</script>
 </body>
 </html>

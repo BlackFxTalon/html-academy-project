@@ -415,7 +415,7 @@ font-size: clamp(0.9rem,4vw,2rem);
     -o-transition: var(--text-color-animation);
     transition: var(--text-color-animation);
 }
-.btn--choose-theme {
+.btn__filter-btn {
     background-color: #D7D1C9;
     padding: 12px 0 12px 20px;
     display: -webkit-box;
@@ -427,17 +427,17 @@ font-size: clamp(0.9rem,4vw,2rem);
     margin-right: 0.3rem;
     position: relative;
 }
-.btn--choose-theme > svg path {
+.btn__filter-btn > svg path {
     -webkit-transition: fill .3s;
     -o-transition: fill .3s;
     transition: fill .3s;
 }
-.btn--choose-theme:hover > svg path,
-.btn--choose-theme:active > svg path,
-.btn--choose-theme:focus > svg path {
+.btn__filter-btn:hover > svg path,
+.btn__filter-btn:active > svg path,
+.btn__filter-btn:focus > svg path {
     fill: black;
 }
-.btn--choose-theme:hover > .dropdown-menu {
+.btn__filter-btn:hover > .dropdown-menu {
     opacity: 1;
 }
 .dropdown-menu {
@@ -473,11 +473,11 @@ font-size: clamp(0.9rem,4vw,2rem);
     padding-top: 1rem;
 }
 @media (max-width:1199px) {
-    .btn--choose-theme {
+    .btn__filter-btn {
      margin-right: 1rem;
     }
 }
-.btn--choose-theme span {
+.btn__filter-btn span {
     padding-right: 33px;
 }
 .btn:active,
@@ -485,7 +485,7 @@ font-size: clamp(0.9rem,4vw,2rem);
 .btn:focus {
     color: var(--hover-text-color);
 }
-.btn--choose-theme svg {
+.btn__filter-btn svg {
     max-width: 18px;    
     max-height: 20px;
     width: 18px;
@@ -972,8 +972,11 @@ font-size: clamp(0.9rem,4vw,2rem);
     background-color: transparent;
     padding: 12px 65px;
     border: 1px solid #202117;
+    transition: opacity .3s;
 }
-
+.btn--submit:disabled {
+    opacity: .3;
+}
 /* footer */
 .footer {
     background-color: #D7D1C9;
@@ -1093,6 +1096,7 @@ font-size: clamp(0.9rem,4vw,2rem);
           align-items: center;
   border:none;
   background-color: transparent;
+  outline-color: transparent;
 }
 .social-media__like-btn svg {
     width: clamp(20px,4vw,50px);
@@ -1107,10 +1111,16 @@ font-size: clamp(0.9rem,4vw,2rem);
 .social-media__like-btn--liked > svg path {
     fill: #d7d1c9;
 }
+
 .like-count {
     -ms-flex-item-align: end;
         align-self: flex-end;
     font-size: clamp(18px,4vw,24px);
+    transition: color .3s;
+}
+
+.social-media__like-btn--liked .like-count {
+    color:#d7d1c9;
 }
 .social-media__icons svg {
     width: clamp(20px,4vw,50px);
@@ -1171,6 +1181,8 @@ font-size: clamp(0.9rem,4vw,2rem);
     padding-left: 1rem;
     margin-bottom: 2rem;
     max-width: 793px;
+    max-height: 408px;
+    overflow-y: auto;
 }
 @media (min-width:576px) {
     .people-comments {
@@ -1205,7 +1217,8 @@ font-size: clamp(0.9rem,4vw,2rem);
 .people-comments__block:not(:last-child) {
     margin-bottom: 55px;
 }
-.people-comments__commentary {
+.people-comments__commentary,
+.people-comments__email {
     font-size: clamp(12px,4vw,16px);
 }
 .comments {
@@ -1302,4 +1315,11 @@ font-size: clamp(0.9rem,4vw,2rem);
 }
 .comments-form__btn {
     margin-top: 2rem;
+}
+
+input.error,
+textarea.error {
+    color: red;
+    outline-color: red;
+    border-color: red;
 }
