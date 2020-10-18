@@ -333,6 +333,7 @@ button {
 }
 .header-mobile-menu {
     opacity: 0;
+    visibility: hidden;
     position: absolute;
     right: 0;
     top: 0;
@@ -369,6 +370,7 @@ button {
 }
 .hamb-btn--opened ~ .header-mobile-menu {
     opacity: 1;
+    visibility: visible;
 }
 /* all-articles */
 .all-articles {
