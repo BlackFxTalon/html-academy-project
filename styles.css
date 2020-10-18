@@ -441,6 +441,7 @@ font-size: clamp(0.9rem,4vw,2rem);
 }
 .btn__filter-btn:hover > .dropdown-menu {
     opacity: 1;
+    visibility: visible;
 }
 .dropdown-menu {
     position: absolute;
@@ -451,6 +452,7 @@ font-size: clamp(0.9rem,4vw,2rem);
     border: 1px solid black;
     border-radius: 5px;
     opacity: 0;
+    visibility: hidden;
     -webkit-transition: opacity .3s;
     -o-transition: opacity .3s;
     transition: opacity .3s;
