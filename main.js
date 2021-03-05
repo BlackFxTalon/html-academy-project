@@ -1,5 +1,8 @@
 import mobileMenu from "./mobileMenu.js";
+import showHideArticleCards from "./showHideArticleCards.js";
+
 mobileMenu();
+showHideArticleCards();
 
 // main.js scripts
 
@@ -10,34 +13,6 @@ const btnSubmit = document.querySelector(".btn--submit");
 const btnShowMoreArticles = document.querySelector(".btn--show-more-articles");
 const btnShowMoreBlogs = document.querySelector(".btn--show-more-blogs");
 const loader = document.querySelector(".loader-default");
-
-// const filterBtn = document.querySelector(".btn__filter-btn");
-// const articleCards = document.querySelectorAll(".article-card");
-// show/hide article cards based on selected option with data-attributes
-
-// filterBtn.addEventListener("change", function (e) {
-//     articleCards.forEach((elements) => {
-//         const journeyArticleCards = elements.dataset.tag === "journey";
-//         const cityArticleCards = elements.dataset.city;
-//         const booksArticleCards = elements.dataset.books;
-//         const photosArticleCards = elements.dataset.photos;
-//         const receiptsArticleCards = elements.dataset.receipts;
-
-//         if (e.target.value === "" || e.target.value === "all articles") {
-//             elements.classList.add("d-flex");
-//         } else if (e.target.value === journeyArticleCards) {
-//             journeyArticleCards.classList.add("d-none");
-//         } else if (e.target.value === cityArticleCards) {
-//             cityArticleCards.classList.add("d-none");
-//         } else if (e.target.value === booksArticleCards) {
-//             booksArticleCards.classList.add("d-none");
-//         } else if (e.target.value === photosArticleCards) {
-//             photosArticleCards.classList.add("d-none");
-//         } else if (e.target.value === receiptsArticleCards) {
-//             receiptsArticleCards.classList.add("d-none");
-//         }
-//     });
-// });
 
 // simple input scripts validation
 siteInputs.forEach((element) => {
@@ -64,7 +39,7 @@ siteTextareas.forEach((element) => {
     });
 });
 
-// ajax scripts for articles, blogs
+// loadMoreArticles fetch function 
 function loadMoreArticles() {
     fetch("articleCards.html", {
         method: "GET",
@@ -90,6 +65,7 @@ function loadMoreArticles() {
                     articleDoc,
                     btnShowMoreArticles
                 );
+                showHideArticleCards();
             }, 1000);
         })
         .catch((error) => {
